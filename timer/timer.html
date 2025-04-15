@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Clock</title>
+    <link rel="stylesheet" href="./timer.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Clock -->
+        <div class="clock-wrapper">
+            <div class="clock" id="clock">
+                <div class="hand hour-hand" id="hourHand"></div>
+                <div class="hand minute-hand" id="minuteHand"></div>
+                <div class="hand second-hand" id="secondHand"></div>
+            </div>
+        </div>
+
+        <!-- Digital Time -->
+        <div class="digital-time" id="digitalTime">00:00:00</div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="startStopBtn">Start</button>
+            <button id="resetBtn" disabled>Reset</button>
+        </div>
+    </div>
+
+    <script src="./timer.js"></script>
+</body>
+
+</html>

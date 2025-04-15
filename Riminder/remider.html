@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Timer</title>
+    <link rel="stylesheet" href="./reminder.css" />
+</head>
+
+<body>
+    <div class="timer-container">
+        <h1>⏳ Countdown Timer</h1>
+
+        <div class="inputs">
+            <div class="input-group">
+                <label for="minutes">Minutes</label>
+                <input type="number" id="minutes" min="0" placeholder="0" />
+            </div>
+            <div class="input-group">
+                <label for="seconds">Seconds</label>
+                <input type="number" id="seconds" min="0" max="59" placeholder="0" />
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+
+        <p id="countdownDisplay" class="countdown">Enter time and click Start</p>
+    </div>
+
+    <footer>
+        <p>© 2025 Abhishek Kumar Sharma</p>
+    </footer>
+
+    <script src="./reminder.js"></script>
+</body>
+
+</html>
