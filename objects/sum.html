@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="display"></p>
+    <p id="d1"></p>
+
+    <script>
+        let obj = {
+            val1: 100,
+            valu2: 200,
+            val3: 232,
+            val: 300,
+            v: 343434
+
+        };
+        let sum = 0;
+        for (let key in obj) {
+            sum += obj[key];
+        }
+        document.getElementById('display').textContent = sum;
+
+
+        function multiplyNumaric(obj) {
+            let c = 0;
+            for (let key in obj) {
+                if (typeof obj[key] == 'number') {
+                    obj[key] *= 2;
+                    c = obj[key];
+                }
+            }
+            document.getElementById('d1').textContent = c;
+        }
+        multiplyNumaric(obj);
+    </script>
+</body>
+
+</html>
