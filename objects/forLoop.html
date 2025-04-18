@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="display">loading...</p>
+
+    <script>
+        let obj = {
+            name: "Abhishek",
+            name1: "sharma",
+            name2: "kumar",
+            name3: "Raj",
+            name4: "none"
+        }
+        for (let key in obj) {
+            if (obj[key] === "Abhishek") {
+                document.getElementById('display').textContent += " " + obj[key];
+            } else {
+                document.getElementById('display').textContent = "provided value is not in the object";
+            }
+        }
+    </script>
+</body>
+
+</html>

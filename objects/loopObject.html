@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="display"></p>
+
+    <script>
+        let obj = {
+            name1: "Abhishek",
+            name2: "sujeet",
+            name3: "sharma",
+            name4: "kumar",
+            name5: "raj"
+
+        }
+        let c = "";
+        for (let key in obj) {
+            obj[key] += "";
+
+
+
+        }
+        document.getElementById('display').textContent = JSON.stringify(obj);
+    </script>
+</body>
+
+</html>
