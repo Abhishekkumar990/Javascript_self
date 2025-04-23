@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box with Circle Progress</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="flex-box">
+        <div class="box-1">
+            <div class="box-1-1"> <input type="number" id="percentInput" placeholder="Enter percentage" min="0" max="100">
+                <button onclick="setProgressFromInput()">Set</button></div>
+            <div class="box-1-2">
+                <div id="circle" class="circle">
+                    <div class="circle-text" id="circle-text"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-2">
+
+        </div>
+
+
+        <div class="box-3">
+            <footer>This is test foolter in the </footer>
+        </div>
+    </div>
+
+    <script>
+        function setProgress(percent) {
+            const circle = document.getElementById('circle');
+            const text = document.getElementById('circle-text');
+
+            percent = Math.max(0, Math.min(percent, 100));
+            circle.style.background = `conic-gradient(green 0% ${percent}%, red ${percent}% 100%)`;
+            circle.style.transition = "background 6s ease-in-out";
+
+
+
+
+            text.textContent = `${percent}%`;
+        }
+
+        function setProgressFromInput() {
+            const val = document.getElementById("percentInput").value;
+
+
+
+
+            setProgress(parseInt(val));
+        }
+
+        // Initial load with 70%
+        setProgress(0);
+    </script>
+</body>
+
+</html>
