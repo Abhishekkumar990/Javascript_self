@@ -1,23 +1,15 @@
 document.getElementById("container").addEventListener('click', (e) => {
     e.preventDefault();
-    const name = document.getElementById('name').value;
+    const firstValue = document.getElementById('firstValue').value;
+    const secondValue = document.getElementById('secondData').value;
 
 
-    let user = {
-        userName: "Abhishek",
-    }
-
-
-
-    for (let key in user) {
-        if (name === user.userName) {
-            document.getElementById('display').textContent = `Match Found: ${user.userName}`;
-        } else {
-            document.getElementById('display').textContent = "Not Found "
-        }
+    function add() {
+        let data = firstValue + secondValue;
+        document.getElementById('display').textContent = data;
 
     }
-
+    add()
 
 
 
