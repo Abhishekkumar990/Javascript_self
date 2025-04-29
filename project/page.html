@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <button onclick="show()">Book</button>
+    </div>
+
+
+
+
+    <script>
+        let book = {
+            name1: "works",
+            details: {
+                title: "Every not of working",
+                author: "Anime Creater",
+                pages: "10",
+                publishedYear: "2004"
+            },
+            name2: "knowen",
+            details: {
+                title: "Every not of working",
+                author: "Anime Creater",
+                pages: "10",
+                publishedYear: "2004"
+            }
+        }
+
+        function show() {
+            let dis = document.createElement("p")
+            for (let key in book)
+
+                if (typeof book[key] === 'object') {
+                    for (let innerkey in book[key]) {
+                        dis.innerHTML += `${innerkey} : ${book[key][innerkey]}<br>`
+                    }
+                    dis.innerHTML += `${key}: ${book[key]}<br>`;
+                }
+
+            document.getElementById("container").appendChild(dis);
+
+        }
+    </script>
+</body>
+
+</html>

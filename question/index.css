@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* Header */
+
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: aqua;
+    padding: 0 20px;
+}
+
+
+/* Logo styling */
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.logo span {
+    color: #fff;
+}
+
+
+/* Menu Button */
+
+.btnMenu {
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+
+/* Dropdown Menu */
+
+.dropdown-content {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    height: auto;
+    width: 200px;
+    background-color: #fff;
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.dropdown-content.show {
+    display: flex;
+}
+
+
+/* Navigation Items */
+
+.dropdown-content li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.dropdown-content li:hover {
+    background-color: rgb(224, 127, 127);
+    color: white;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content a:hover {
+    color: white;
+}
+
+
+/* Main content area */
+
+.flex-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+
+/* Question display box */
+
+.question-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
