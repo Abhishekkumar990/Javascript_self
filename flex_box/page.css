@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    background-color: aliceblue;
+    flex-direction: row;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav ul li {
+    padding: 10px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+}
+
+.nav-content {
+    display: none;
+    justify-content: right;
+}
+
+.nav ul li a:hover {
+    background-color: red;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.nav-btn:hover {
+    background-color: lightgray;
+    font-weight: 600;
+}
+
+.content-1 {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+}
+
+.content-1-1 {
+    display: flex;
+    flex: 2;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    flex-direction: column;
+    padding: 18px;
+    margin: 15px;
+}
+
+.content-1-2 {
+    display: flex;
+    flex: 1;
+    /* background-color: bisque; */
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 15px;
+}
+
+.content-2 {
+    display: flex;
+    flex: 1;
+    /* justify-content: flex-start; */
+    gap: 22px;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    /* border: solid black 1px; */
+    max-width: 100%;
+}
+
+.details-1,
+.details-2,
+.details-3,
+.details-4,
+.details-5,
+.details-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 330px;
+    max-width: 200px;
+    width: 350px;
+    height: 220px;
+    color: black;
+    font-weight: bold;
+    box-shadow: 4px 7px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 14px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+        /* Start from the initial position */
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+}
+
+.content-2 {
+    animation: slide 15s linear infinite;
+}
+
+.details-1:hover,
+.details-2:hover,
+.details-3:hover,
+.details-4:hover,
+.details-5:hover,
+.details-6:hover {
+    max-height: 320px;
+    max-width: 220px;
+    width: 320px;
+    height: 230px;
+}
+
+.details-1 {
+    background-image: url("https://gratisography.com/wp-content/uploads/2025/01/gratisography-dog-vacation-800x525.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.details-2 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj8sKRgBGHeqyyzcVzby3YrHH_s0KVk-PozzvgrCdsueqkbhorjmZ0cByvks-Oy9tK38M&usqp=CAU");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.details-3 {
+    background-image: url("https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg");
+    background-position: center;
+}
+
+.content-3 {
+    display: flex;
+    flex: 1;
+    /* background-color: red; */
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 15px;
+}
+
+@media (max-width: 860px) {
+    .header {
+        align-items: center;
+    }
+    .nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 100%;
+        padding: 19px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        left: 0;
+    }
+    .nav-menu.show ul {
+        display: flex;
+        /* Show the menu */
+    }
+    /* Style for the nav button */
+    .nav-btn {
+        display: block;
+        padding: 24px;
+        margin: 18px;
+    }
+    /* Container and content styling */
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Details box styles */
+    .details-1,
+    .details-2,
+    .details-3 {
+        max-height: 260px;
+        max-width: 200px;
+        width: 180px;
+        height: 120px;
+        box-shadow: 4px 7px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+    }
+    /* Hover effects for details */
+    .details-1:hover,
+    .details-2:hover,
+    .details-3:hover {
+        max-height: 280px;
+        max-width: 230px;
+        width: 200px;
+        height: 150px;
+    }
+}
